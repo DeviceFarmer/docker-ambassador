@@ -12,3 +12,8 @@ blocks:
           commands:
             - checkout
             - docker build .
+promotions:
+  - name: Deploy to DockerHub
+    pipeline_file: deploy.yml
+    auto_promote:
+      when: (branch = 'master' OR tag =~ '.*') AND result = 'passed'
