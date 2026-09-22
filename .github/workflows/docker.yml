@@ -16,7 +16,7 @@ concurrency:
 jobs:
   docker:
     name: Build and publish
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       # Required to mint the OIDC token exchanged for a short-lived Docker Hub token.
